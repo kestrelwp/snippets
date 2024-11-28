@@ -2,10 +2,10 @@
 
 /**
  * Decide whether the "Create account" checkbox should be
- * checked or unchecked by default when the page loads and
+ * checked or unchecked by default when the page loads or
  * when a customer enters their email address.
  * 
- * Return false to leave the checkbox Unchecked.
+ * Return false to leave the checkbox Unchecked by default.
  * 
  * @return bool.
  */
