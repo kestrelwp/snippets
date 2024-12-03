@@ -1,0 +1,14 @@
+/* You can add custom CSS within CheckoutWC by navigating to CheckoutWC > Appearance > Design > Custom CSS
+ *
+ * This will allow the sidecart floating button to move to the left when a scroll up button is visible
+ * In this case, the theme has a scroll up button with the selector of `a#kt-scroll-up.scroll-visible`.
+ * 
+ * Adjust this selector to match your theme's scroll up button, and adjust -70px to the desired position.
+ *
+*/
+body:has(a#kt-scroll-up.scroll-visible) {
+    --cfw-side-cart-button-right-position-margin: -70px;
+}
+#cfw-side-cart-floating-button {
+    transition: transform 150ms linear;
+    transform: translateX(var(--cfw-side-cart-button-right-position-margin,0px));
