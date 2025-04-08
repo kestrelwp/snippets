@@ -1,7 +1,7 @@
 <?php // only copy if needed!
 
 /**
- * Adds an additional amount to the total if date range selected is during December 2025
+ * Adds an additional amount to the total if rental date range selected is during December 2025, for products with advanced pricing enabled
  * 
  * You can use amend this code to set your own date range, amount, and conditions
  *
