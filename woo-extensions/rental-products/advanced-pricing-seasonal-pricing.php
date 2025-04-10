@@ -16,7 +16,7 @@ function kwp_rentals_advanced_pricing_seasonal_pricing( $total, $data ) {
 
     if ( isset( $data['rent_from'] ) && isset( $data['rent_to'] ) ) {
 
-        if ( '2025-12-01' <= $data['rent_from']  && '2025-12-31' >= $data['rent_to'] ) {
+        if ( '2025-12-01' <= $data['rent_from'] && '2025-12-31' >= $data['rent_to'] ) {
 
             // Adds $20 to the total if the rental period is between December 1st and December 31st 2025
 
