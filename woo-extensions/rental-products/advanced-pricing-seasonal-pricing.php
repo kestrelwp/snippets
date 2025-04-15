@@ -27,6 +27,5 @@ function kwp_rentals_advanced_pricing_seasonal_pricing( $total, $data ) {
     }
 
     return $total;
-
 }
 add_filter( 'wcrp_rental_products_advanced_pricing', 'kwp_rentals_advanced_pricing_seasonal_pricing', 10, 2 );

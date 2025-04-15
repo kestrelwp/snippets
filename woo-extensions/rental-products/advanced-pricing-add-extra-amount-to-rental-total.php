@@ -16,6 +16,5 @@ function kwp_rentals_advanced_pricing_add_extra_amount_to_rental_total( $total, 
     //$total = $total + 5.00; // Add additional $5 to the calculated total without multiplying by the quantity, if uncommenting this line, ensure the line above is removed
 
     return $total;
-
 }
 add_filter( 'wcrp_rental_products_advanced_pricing', 'kwp_rentals_advanced_pricing_add_extra_amount_to_rental_total', 10, 2 );

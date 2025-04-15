@@ -64,6 +64,5 @@ function kwp_rentals_advanced_pricing_day_rental_full_weekend_discount( $total, 
     }
 
     return $total;
-
 }
 add_filter( 'wcrp_rental_products_advanced_pricing', 'kwp_rentals_advanced_pricing_day_rental_full_weekend_discount', 10, 2 );
