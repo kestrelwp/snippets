@@ -15,7 +15,7 @@
 // List of allowed values in the filter return value below: 'cloudflare', 'backblaze', 'digitalocean', 'wasabi', 'aws' (default)
 add_filter( 'woocommerce_amazon_s3_client_cloud_service', fn() => 'cloudflare' );
 
-// NOTE: Replace strings between angle brackets '<...>' with your own values.
+// NOTE: Replace strings between angle brackets `<...>` with your own values.
 add_filter( 'woocommerce_amazon_s3_client_args', function( $args ) {
     return array_merge( $args, [
         'region'      => 'auto',
