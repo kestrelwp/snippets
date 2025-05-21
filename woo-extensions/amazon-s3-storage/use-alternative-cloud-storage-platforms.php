@@ -10,8 +10,6 @@
  * Other providers may have similar documentation, contact their support to share information on their S3 compatibility.
  *
  * Since the regions in these platforms may not be the same as AWS, it may be necessary to specify region and bucket in shorcodes.
- *
- * NOTE:
  */
 
 // List of allowed values in the filter return value below: 'cloudflare', 'backblaze', 'digitalocean', 'wasabi', 'aws' (default)
