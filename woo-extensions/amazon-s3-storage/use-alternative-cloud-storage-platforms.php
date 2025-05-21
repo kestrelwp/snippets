@@ -11,12 +11,13 @@
  *
  * Since the regions in these platforms may not be the same as AWS, it may be necessary to specify region and bucket in shorcodes.
  *
- * NOTE: Replace strings between angle brackets "<...>" with your own values.
+ * NOTE:
  */
 
-// list of allowed values: 'cloudflare', 'backblaze', 'digitalocean', 'wasabi', 'aws' (default)
+// List of allowed values in the filter return value below: 'cloudflare', 'backblaze', 'digitalocean', 'wasabi', 'aws' (default)
 add_filter( 'woocommerce_amazon_s3_client_cloud_service', fn() => 'cloudflare' );
 
+// NOTE: Replace strings between angle brackets '<...>' with your own values.
 add_filter( 'woocommerce_amazon_s3_client_args', function( $args ) {
     return array_merge( $args, [
         'region'      => 'auto',
@@ -28,5 +29,6 @@ add_filter( 'woocommerce_amazon_s3_client_args', function( $args ) {
     ] );
 } );
 
-// uncomment the following for additional troubleshooting if enabling debug mode in plugin settings isn't helpful (NOTE: may generate large log files)
+// Uncomment the following for additional troubleshooting if enabling debug mode in plugin settings isn't helpful.
+// NOTE: May generate large log files.
 // add_filter( 'woocommerce_amazon_s3_client_debug_mode', '__return_true' );
