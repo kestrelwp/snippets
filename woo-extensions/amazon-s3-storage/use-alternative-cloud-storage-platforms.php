@@ -28,5 +28,4 @@ add_filter( 'woocommerce_amazon_s3_client_args', function( $args ) {
 } );
 
 // Uncomment the following for additional troubleshooting if enabling debug mode in plugin settings isn't helpful.
-// NOTE: May generate large log files.
 // add_filter( 'woocommerce_amazon_s3_client_debug_mode', '__return_true' );
