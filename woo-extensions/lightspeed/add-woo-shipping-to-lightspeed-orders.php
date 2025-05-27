@@ -57,7 +57,7 @@ add_filter( 'wclsi_build_sale_lines', 'add_ls_shipping_product', 10, 3 );
 function include_ls_shipping_payment( $payment, $shipping_total, $shipping_tax ) {
 
 	if ( wp_cache_get( 'wclsi_add_shipping_payment', WCLSI_CACHE ) ) {
-		$payment += $shipping_total + $shipping_tax;
+		$payment += ( $shipping_total - $shipping_tax );
 		wp_cache_delete( 'wclsi_add_shipping_payment', WCLSI_CACHE );
 	}
 
