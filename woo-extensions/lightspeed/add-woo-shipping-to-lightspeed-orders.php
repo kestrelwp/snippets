@@ -19,7 +19,7 @@
  */
 
 
-function add_ls_shipping_product ( $sale_lines, $shipping_total, $tax_id ) {
+function add_ls_shipping_product ( $sale_lines, $shipping_total, $tax_id, $order ) {
 
 	// ** replace "null" with the Lightspeed ID of the shipping product here **
 	$ls_product_id = null;
@@ -32,9 +32,11 @@ function add_ls_shipping_product ( $sale_lines, $shipping_total, $tax_id ) {
 	if ( $shipping_total > 0 ) {
 		$shipping_line = [];
 
-		if ( ! isset( $tax_id ) ) {
-			$shipping_line['tax'] = 'false';
-		} else {
+		$shipping_line['tax'] = 'false';
+		$shipping_tax = $order->get_shipping_tax();
+
+		if ( isset( $tax_id ) && $shipping_tax > 0 ) {
+			$shipping_line['tax'] = 'true';
 			$shipping_line['taxCategoryID'] = $tax_id;
 		}
 
@@ -49,7 +51,7 @@ function add_ls_shipping_product ( $sale_lines, $shipping_total, $tax_id ) {
 	return $sale_lines;
 }
 
-add_filter( 'wclsi_build_sale_lines', 'add_ls_shipping_product', 10, 3 );
+add_filter( 'wclsi_build_sale_lines', 'add_ls_shipping_product', 10, 4 );
 
 
 //update the payment calculation to include shipping costs
